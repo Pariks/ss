@@ -1,1 +1,2 @@
- deals
+@extends('layouts.app')
+deals

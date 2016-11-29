@@ -19,6 +19,20 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <style>
+
+        li.nav-item > a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .brand-name{
+
+        }
+
+    </style>
 </head>
 <body>
     <div id="app">
@@ -36,6 +50,9 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="/images/logo/logo.png" style="width: 50px; height: 50px; text-align: right;">
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'SecretSanta') }}
                     </a>
                 </div>
@@ -43,7 +60,18 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                       <li class="nav-item" >
+                           <a href="/home">Home</a>
+                       </li>
+                        <li class="nav-item" >
+                            <a href="/deal">Deals</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="/howItWorks">How it Works</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="/aboutUs">About Us</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,7 +110,6 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
