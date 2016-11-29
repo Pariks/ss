@@ -5,49 +5,26 @@
 @endsection
 
 @section('body')
-
-    <div class="jumbotron">
-        Your Gender is
-        @if($gender == 'male')
-            Male
-        @elseif($gender = 'female')
-            Female
-        @else
-            Unknown
-        @endif
-    <p class="lead">
-        @unless(empty($text))
-            {!! $text !!}
-        @endunless
-    </p>
-
-
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-    </div>
-
-    <div class="row marketing">
-        <div class="col-lg-6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-            <h4>Subheading</h4>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-            <h4>Subheading</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-            <h4>Subheading</h4>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-            <h4>Subheading</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-danger">
+                    <div class="panel-header" >
+                        <img class="pull-right" src="/images/santa/2.png" style="width:60px; height: 60px; display: inline-block;">
+                        <div style="margin: 15px;  font-size: 36px;"> Enjoy Exclusive offers on SecretSanta </div>
+                    </div>
+                    <div class="panel-body">
+                        <p>Be a secret santa and make your loved one happy.</p>
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-header"  >
+                        <h3 style="margin-left: 15px;"><span >Mercedes CLA250</span><span class="label label-success ">Offer</span></h3>
+                    </div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

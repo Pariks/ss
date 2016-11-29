@@ -9,22 +9,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <link rel="shortcut icon" href="/images/logo/logo.png" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <title>{{ config('app.name', 'SecretSanta') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <!-- Styles -->
+    <link href="/css/custome.app.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
     <!-- Custom styles for this template -->
 <!--    <link href="/css/narrow-jumbotron.css" rel="stylesheet"> -->
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
     @include('layouts.menu')
     @yield('body')
     @include('layouts.footer')
