@@ -13,7 +13,8 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <!-- Styles -->
+    <link href="/css/custome.app.css" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -22,16 +23,6 @@
     </script>
     <style>
 
-        li.nav-item > a {
-            display: block;
-            color: #666;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .brand-name{
-
-        }
 
     </style>
 </head>
