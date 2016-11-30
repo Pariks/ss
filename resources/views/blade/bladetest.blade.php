@@ -57,7 +57,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10">
                 <div class="panel panel-danger">
                     <div class="panel-header" >
                         <img class="pull-right" src="/images/santa/2.png" style="width:60px; height: 60px; display: inline-block;">
@@ -101,12 +101,25 @@
                             <div class="card card-block" style="margin: 10px;">
                                 <h3 class="card-title">How We Works</h3>
                                 <p class="card-text">If you are confuse what to gift on christmas? and if you want to be mordern SecretSanta then we are here to solve youjr problem. </p>
-                                <a href="/howItWorks" class="btn btn-primary" >Know More</a>
+                                <a href="/howItWorks" class="btn btn-success" >Know More</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
+            </div>
+            <div class="col-md-2">
+
+                    <div class="card card-block" style="margin: 10px;">
+                        <h3 class="card-title">Sponsored </h3>
+                        <p class="card-text">Find more Exciting products and paste their links in suggestion.</p>
+                        <a href="amazon" class="btn btn-warning" >Amazon.ca</a>
+                    </div>
+                <div class="card card-block" style="margin: 10px;">
+                    <h3 class="card-title">Sponsored </h3>
+                    <p class="card-text">Find best deals on electronics and consumer goods.</p>
+                    <a href="bestbuy" class="btn btn-primary" >BestBuy.ca</a>
+                </div>
+
             </div>
         </div>
 

@@ -11,6 +11,9 @@
 |
 */
 
+
+use Illuminate\Support\Facades\Redirect;
+
 Route::get('/', function(){
     return view('blade.bladetest');
 });
@@ -29,3 +32,10 @@ Route::group(['middleware' => 'authenticated'], function(){
     Route::get('aboutUs',  'AboutUsController@aboutUs');
 });
 Route::get('howItWorks', 'HowItWorksController@howItWorks');
+
+Route::get('amazon', function(){
+    return Redirect::to('http://www.amazon.ca');
+});
+Route::get('bestbuy', function(){
+    return Redirect::to('http://www.bestbuy.ca');
+});
