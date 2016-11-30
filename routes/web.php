@@ -45,3 +45,8 @@ Route::get('bestbuy', function(){
 
 Route::get('aboutUs',  'AboutUsController@aboutUs');
 Route::post('/profile', 'ProfileController@updateAvatar');
+
+/*Route::get('upload',  function (){
+    return view('test.upload');
+});
+Route::post('/upload', 'ProfileController@updateAvatar');*/

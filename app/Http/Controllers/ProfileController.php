@@ -21,7 +21,7 @@ class ProfileController extends Controller
     }
     public function updateAvatar(Request $request)
     {
-
+        
         //Handle user upload of avatar
         If($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
@@ -53,7 +53,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->hasFile('avatar'));
     }
 
     /**
