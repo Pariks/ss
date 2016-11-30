@@ -21,7 +21,6 @@ class ProfileController extends Controller
     }
     public function updateAvatar(Request $request)
     {
-        
         //Handle user upload of avatar
         If($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
@@ -29,7 +28,7 @@ class ProfileController extends Controller
             Image::make($avatar)->resize(300,300)->save(public_path('/images/uploads/avatars/'.$filename));
             $user = Auth::user();
             $user->avatar = $filename;
-            $user->save();
+            $user->update();
         }
         return view('pages.profile', array('user' => Auth::user()));
 
