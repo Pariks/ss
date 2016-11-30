@@ -26,11 +26,14 @@ Route::post('users', ['uses' => 'UserController@store']);*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+//Routes that requires authentication
 Route::group(['middleware' => 'authenticated'], function(){
     Route::get('deal', 'DealController@deals');
-
-    Route::get('aboutUs',  'AboutUsController@aboutUs');
+    Route::get('/profile', 'ProfileController@index');
 });
+
+
 Route::get('howItWorks', 'HowItWorksController@howItWorks');
 
 Route::get('amazon', function(){
@@ -39,3 +42,6 @@ Route::get('amazon', function(){
 Route::get('bestbuy', function(){
     return Redirect::to('http://www.bestbuy.ca');
 });
+
+Route::get('aboutUs',  'AboutUsController@aboutUs');
+Route::post('/profile', 'ProfileController@updateAvatar');
