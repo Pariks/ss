@@ -108,17 +108,16 @@
                 </div>
             </div>
             <div class="col-md-2">
-
                     <div class="card card-block" style="margin: 10px;">
                         <h3 class="card-title">Sponsored </h3>
-                        <p class="card-text">Find more Exciting products and paste their links in suggestion.</p>
+                        <p class="card-text">Find more Exciting products and paste their links in suggestion at time of placing gift order.</p>
                         <a href="amazon" class="btn btn-warning" >Amazon.ca</a>
                     </div>
-                <div class="card card-block" style="margin: 10px;">
-                    <h3 class="card-title">Sponsored </h3>
-                    <p class="card-text">Find best deals on electronics and consumer goods.</p>
-                    <a href="bestbuy" class="btn btn-primary" >BestBuy.ca</a>
-                </div>
+                    <div class="card card-block" style="margin: 10px;">
+                        <h3 class="card-title">Sponsored </h3>
+                        <p class="card-text">Find best deals on electronics and consumer goods and paste their links in suggestion at time of placing gift order..</p>
+                        <a href="bestbuy" class="btn btn-primary" >BestBuy.ca</a>
+                    </div>
 
             </div>
         </div>
