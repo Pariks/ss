@@ -37,12 +37,10 @@
 <div class="app">
     @include('layouts.menu')
     @yield('content')
-
-
-
+    @include('layouts.footer')
 </div> <!-- /container -->
 
-@include('layouts.footer')
+
 
 </body>
 </html>
