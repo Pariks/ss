@@ -13,9 +13,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>{{ config('app.name', 'SecretSanta') }}</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <!-- Styles -->
@@ -26,6 +27,7 @@
                 'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
     <!-- Custom styles for this template -->
 <!--    <link href="/css/narrow-jumbotron.css" rel="stylesheet"> -->
 </head>
@@ -34,13 +36,13 @@
 
 <div class="app">
     @include('layouts.menu')
-    @yield('body')
-    @include('layouts.footer')
+    @yield('content')
+
 
 
 </div> <!-- /container -->
 
-
+@include('layouts.footer')
 
 </body>
 </html>
