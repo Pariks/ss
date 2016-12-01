@@ -64,10 +64,10 @@
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-4">
-                            <span> Create Account
+                            <span> Not Member Yet?
                             <a class="btn btn-link" href="{{ url('/register') }}">
                                 <i class="fa fa-user-circle"></i>
-                               Signup
+                               Create Account
                             </a>
                             </span>
                         </div>

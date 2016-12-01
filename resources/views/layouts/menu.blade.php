@@ -31,8 +31,33 @@
                 <li class="nav-item" >
                     <a href="/howItWorks">How it Works</a>
                 </li>
-                <li class="nav-item" >
-                    <a href="/aboutUs">About Us</a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >
+
+                       More  <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ url('/aboutUs') }}">
+                                <i class="fa fa-newspaper-o"></i>
+                                 About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/contactUs') }}">
+                                <i class="fa fa-address-book-o"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url('/feedback') }}">
+                                <i class="fa fa-commenting-o"></i>
+                                Feedback
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 
