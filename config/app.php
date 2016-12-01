@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Spatie\LinkChecker\LinkCheckerServiceProvider::class,
 
         /*
          * Package Service Providers...
