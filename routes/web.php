@@ -46,6 +46,7 @@ Route::get('bestbuy', function(){
 Route::get('aboutUs',  'MoreController@aboutUs');
 Route::get('contactUs',  'MoreController@contactUs');
 Route::get('feedback', 'MoreController@feedback');
+Route::get('learnHow', 'MoreController@learnHow');
 /*Route::get('upload',  function (){
     return view('test.upload');
 });

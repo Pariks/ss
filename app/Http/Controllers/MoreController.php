@@ -10,15 +10,19 @@ class MoreController extends Controller
 
     public function aboutUs()
     {
-        return view('pages.aboutUs');
+        return view('more.aboutUs');
     }
     public function contactUs()
     {
-        return view('pages.contactUs');
+        return view('more.contactUs');
     }
     public function feedback()
     {
-        return view('pages.feedback');
+        return view('more.feedback');
+    }
+    public function learnHow()
+    {
+        return view('more.learnHow');
     }
     /**
      * Display a listing of the resource.

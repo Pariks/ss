@@ -8,8 +8,8 @@
                     <div class="panel-heading">Contact Us</div>
 
                     <div class="panel-body">
-                        <h1>Hello, {!! $myname !!} </h1>
-                        You are logged in {!! $auth->email !!}!
+                        <h1>Hello, {!! $user->name !!} </h1>
+                        You are logged in {!! $user->email !!}!
                     </div>
                 </div>
             </div>

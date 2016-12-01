@@ -5,7 +5,7 @@
     margin-top: 50px;">
         <div class="row">
             <div class="col-md-12 col-md-offset-4">
-                <p class="text-muted credit"> &copy; Copyright by SecretSanta INC.<a href="www.secretesanta.ca">SecretSanta</a> </p>
+                <p class="text-muted credit"> &copy; Copyright by SecretSanta INC. </p>
             </div>
         </div>
         </div>

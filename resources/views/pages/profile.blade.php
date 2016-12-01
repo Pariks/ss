@@ -14,7 +14,7 @@
                             <div class="col-md-9">
                                  <form enctype="multipart/form-data" action="/profile" method="post">
                                      <label>Upload Profile Image</label>
-                                     <input type="file" name="avatar">
+                                     <input class="btn btn-default btn-file" type="file" name="avatar" >
                                      <input type="hidden" name="_token" value="{{csrf_token()}}">
                                      <input type="submit" class="pull-right btn btn-primary" value="Upload">
                                  </form>

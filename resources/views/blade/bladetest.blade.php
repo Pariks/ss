@@ -67,11 +67,32 @@
                         <p>Be a secret santa and make your loved one happy.</p>
                     </div>
                 </div>
-                <div class="panel panel-danger">
-                    <div class="panel-header"  >
-                        <h3 style="margin-left: 15px;"><span >Mercedes CLA250</span><span class="label label-success ">Offer</span></h3>
-                    </div>
-                    <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Auth::guest())
+                            <div class="panel panel-danger">
+                                <div class="panel-header"  >
+                                    <h3 style="margin-left: 15px;"><span >Become Member </span><a href="/register" style="text-decoration: none;"><span class="label label-primary ">NOW!</span></a>
+                                    <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">50$</span> gift credit </span><img src="/images/index/credit.png" style="margin-left:10px; width: 125px; height: 100px;">
+                                    </h3>
+                                </div>
+                                <div class="panel-body">
+
+                                </div>
+                            </div>
+                        @else
+                            <div class="panel panel-danger">
+                                <div class="panel-header"  >
+                                    <h3 style="margin-left: 15px;"><span> Gift More, Earn More</span><a href="/learnHow" style="text-decoration: none;"><span class="label label-primary ">Learn How?</span></a>
+                                        <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">3x</span> worth gifts</span><img src="/images/index/earn.png" style="margin-left:10px; width: 150px; height: 70px;">
+                                    </h3>
+                                </div>
+                                <div class="panel-body">
+
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
 
