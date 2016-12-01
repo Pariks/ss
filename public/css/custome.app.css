@@ -34,3 +34,10 @@ li.nav-item > a {
     cursor: inherit;
     display: block;
 }
+
+#menu-navbar-left a:active{
+    color: red;
+}
+#menu-navbar-right a:active{
+    color: red;
+}

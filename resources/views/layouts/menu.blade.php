@@ -21,9 +21,9 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li class="nav-item" >
-                    <a href="/home">Home</a>
+            <ul class="nav navbar-nav" id="menu-navbar-left">
+                <li class="nav-item">
+                    <a href="/home" >Home</a>
                 </li>
                 <li class="nav-item" >
                     <a href="/deal">Deals</a>
@@ -62,7 +62,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="menu-navbar-right">
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
