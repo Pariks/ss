@@ -23,7 +23,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav" id="menu-navbar-left">
                 <li class="nav-item">
-                    <a href="/home" >Home</a>
+                    <a href="/home" class="active" >Home</a>
                 </li>
                 <li class="nav-item" >
                     <a href="/deal">Deals</a>

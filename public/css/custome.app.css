@@ -35,9 +35,13 @@ li.nav-item > a {
     display: block;
 }
 
-#menu-navbar-left a:active{
+ #menu-navbar-left a:active{
     color: red;
 }
 #menu-navbar-right a:active{
+    color: red;
+}
+
+li.active{
     color: red;
 }
