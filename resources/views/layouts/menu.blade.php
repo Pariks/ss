@@ -12,7 +12,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/images/logo/logo.png" style="width: 50px; height: 50px; text-align: right;">
+                <img src="/images/logo/logo.png" class="img-responsive" style="width: 50px; height: 50px; text-align: right;">
             </a>
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'SecretSanta') }}
@@ -71,7 +71,7 @@
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative; padding-left: 50px;">
-                            <img src="/images/uploads/avatars/{{Auth::user()->avatar}}" style="height: 32px; width: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%; float: left;">
+                            <img src="/images/uploads/avatars/{{Auth::user()->avatar}}" class="img-responsive" style="height: 32px; width: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%; float: left;">
                             {{ Auth::user()->name }}  <span class="caret"></span>
                         </a>
 

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="jumbotron" style="background-image: url('/images/slideshow/3.jpg'); width: 100%; ">
+<div class="jumbotron" style="background-image: url('/images/slideshow/3.jpg'); width: 100%; height: 300px;">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
@@ -22,7 +22,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-4">
+            <div class="col-md-6 col-md-offset-3">
                 <p>Get <span class="label label-success">130$</span> worth of gifts on <span class="label label-default">100$</span> you spend.
                     <a class="btn btn-link" href="{{ url('/deal') }}">
                         <i class="fa fa-plus-circle"></i>

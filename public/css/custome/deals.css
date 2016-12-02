@@ -1,0 +1,50 @@
+#deal100{
+    border: 1px solid #40C4FF;
+    box-shadow: 1px 2px lightgrey;
+    border-radius: 2px;
+    width: 800px;
+}
+
+#deal100-hearder{
+    background-color: #40C4FF;
+    color: whitesmoke;
+    height: 70px;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    box-shadow: 1px 2px lightgrey;
+    font-size: 36px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.btn-white{
+    background-color: white;
+    color: #E91E63;
+    font-weight: Bold;
+    margin: 10px;
+    box-shadow: 1px 1px lightgrey;
+    border: none;
+}
+
+.btn-white:hover{
+    background-color: lightgray;
+    color: white;
+    float: right;
+    box-shadow: 1px 1px gray;
+}
+
+/* Also use prefixes with @keyframes and animation to support current browsers */
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+.blink-link{
+    animation: blinker steps(1) 400ms infinite alternate;
+}
+
+.blink-link{
+    font-weight: 600;
+    margin-top: 20px;
+}

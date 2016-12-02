@@ -13,6 +13,7 @@ class DealController extends Controller
 
     public function deals()
     {
-        return view('pages.deal');
+        $deals = ['100', '200', '300'];
+        return view('pages.deal')->with('deals', $deals);
     }
 }

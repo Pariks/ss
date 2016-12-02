@@ -20,17 +20,19 @@
     <title>{{ config('app.name', 'SecretSanta') }}</title>
     <!-- Scripts -->
     <script src="/js/custome.js"></script>
+    <script src="/js/notification/notify.js"></script>
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="/css/custome.app.css" rel="stylesheet">
+    <link href="/css/custome/custome.app.css" rel="stylesheet">
+    <link href="/css/custome/deals.css" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
                 'csrfToken' => csrf_token(),
         ]); ?>
-
     </script>
 
     <!-- Custom styles for this template -->

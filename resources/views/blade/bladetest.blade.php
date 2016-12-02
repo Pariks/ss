@@ -18,7 +18,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item ">
-                    <img src="/images/slideshow/3.jpg" alt="2x amount Gift">
+                    <img src="/images/slideshow/3.jpg" class="img-responsive" alt="2x amount Gift">
                     <div class="carousel-caption">
                         <h3>Welcome</h3>
                         <p>Welcome to worls's 1st online secret santa.</p>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="item active">
-                    <img src="/images/slideshow/2.jpg" alt="Be a SecretSanta">
+                    <img src="/images/slideshow/2.jpg" class="img-responsive" alt="Be a SecretSanta">
                     <div class="carousel-caption">
                         <h3> </h3>
                         <p>Bring joy on faces of your loved one by gifting through us.</p>
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="/images/slideshow/1.jpg" alt="Welcome">
+                    <img src="/images/slideshow/1.jpg" class="img-responsive" alt="Welcome">
                     <div class="carousel-caption">
 
                         <h3>Amount 2X Worth Gift</h3>
@@ -60,7 +60,7 @@
             <div class="col-md-10">
                 <div class="panel panel-danger">
                     <div class="panel-header" >
-                        <img class="pull-right" src="/images/santa/2.png" style="width:60px; height: 60px; display: inline-block;">
+                        <img class="pull-right img-responsive" src="/images/santa/2.png" style="width:60px; height: 60px; display: inline-block;">
                         <div style="margin: 15px;  font-size: 36px;"> Enjoy Exclusive offers on SecretSanta </div>
                     </div>
                     <div class="panel-body">
@@ -74,7 +74,7 @@
                             <div class="panel panel-danger">
                                 <div class="panel-header"  >
                                     <h3 style="margin-left: 15px;"><span >Become Member </span><a href="/register" style="text-decoration: none;"><span class="label label-primary ">NOW!</span></a>
-                                    <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">50$</span> gift credit </span><img src="/images/index/credit.png" style="margin-left:10px; width: 125px; height: 100px;">
+                                    <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">50$</span> gift credit <img src="/images/index/credit.png"   style="margin-left:10px; width: 125px; height: 100px;"></span>
                                     </h3>
                                 </div>
                                 <div class="panel-body">
@@ -85,7 +85,7 @@
                             <div class="panel panel-danger">
                                 <div class="panel-header"  >
                                     <h3 style="margin-left: 15px;"><span> Gift More, Earn More</span><a href="/learnHow" style="text-decoration: none;"><span class="label label-primary ">Learn How?</span></a>
-                                        <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">3x</span> worth gifts</span><img src="/images/index/earn.png" style="margin-left:10px; width: 150px; height: 70px;">
+                                        <span style="margin-left: 20px;"> Get <span style="font-size: 200%;">3x</span> worth gifts<img src="/images/index/earn.png"   style="margin-left:10px; width: 150px; height: 70px;"></span>
                                     </h3>
                                 </div>
                                 <div class="panel-body">
@@ -102,17 +102,7 @@
                             <div class="card card-block" style="margin: 10px;">
                                 <h3 class="card-title">What We Mean</h3>
                                 <p class="card-text">We started special service on special occation of happiness. We want to allow everyone to be Santa and bring joy on precious day.</p>
-                                <a href="/home" class="btn btn-danger" >Be a SecretSanta</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-success" >
-                            <div class="card card-block" style="margin: 10px;">
-                                <h3 class="card-title">Exclusive Offers</h3>
-                                <p class="card-text">We are offering 2x worth of gifts on the amout you spend. The more you spend , almost double you get in return. Check out our exiting deals.</p>
-                                <a href="/deal" class="btn btn-warning" >Explore Deals</a>
+                                <br><a href="/home" class="btn btn-danger" >Be a SecretSanta</a>
                             </div>
                         </div>
 
@@ -120,9 +110,19 @@
                     <div class="col-md-4">
                         <div class="panel panel-default" >
                             <div class="card card-block" style="margin: 10px;">
+                                <h3 class="card-title">Exclusive Offers</h3>
+                                <p class="card-text">We are offering 2x worth of gifts on the amout you spend. The more you spend , almost double you get in return. Check out our exiting deals.</p>
+                                <br><a href="/deal" class="btn btn-warning" >Explore Deals</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default " >
+                            <div class="card card-block" style="margin: 10px;">
                                 <h3 class="card-title">How We Works</h3>
                                 <p class="card-text">If you are confuse what to gift on christmas? and if you want to be mordern SecretSanta then we are here to solve youjr problem. </p>
-                                <a href="/howItWorks" class="btn btn-success" >Know More</a>
+                                <br><a href="/howItWorks" class="btn btn-success" >Know More</a>
                             </div>
                         </div>
                     </div>
