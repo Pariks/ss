@@ -19,7 +19,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <title>{{ config('app.name', 'SecretSanta') }}</title>
     <!-- Scripts -->
-    <script src="/js/custome.js"></script>
+    <script src="/js/custome/custome.js"></script>
+
     <script src="/js/notification/notify.js"></script>
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -27,7 +28,8 @@
     <!-- Styles -->
     <link href="/css/custome.app.css" rel="stylesheet">
     <link href="/css/custome/custome.app.css" rel="stylesheet">
-    <link href="/css/custome/deals.css" rel="stylesheet">
+
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([

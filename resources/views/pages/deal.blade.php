@@ -2,6 +2,7 @@
 
 
 @section('content')
+    <link href="/css/custome/deals.css" rel="stylesheet">
     <div class="jumbotron center-block" style="background-image: url('/images/deals/dealCover.jpg'); width: 100%;  height: 300px;">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -20,16 +21,16 @@
             </div>
         </div>
     </div>
-
+    <script src="/js/custome/deals.js"></script>
     <div class="container">
         @foreach($deals as $deal)
-        <div class="row center-block" id="deal{{$deal}}">
-            <div id="deal{{$deal}}-hearder">
-                <p >Get <span class="label label-success">130$</span> worth of gifts on <span class="label label-default">{{$deal}}$</span> you spend.
+        <div class="row center-block" id="deal{{$deal['amount']}}">
+            <div id="deal{{$deal['amount']}}-hearder">
+                <p class="lead" >Get <span class="label label-success">130$</span> worth of gifts on <span class="label label-default">{{$deal['amount']}}$</span> you spend.
             </div>
-            <div id="deal{{$deal}}-body" >
-                <span class="btn btn-default btn-white pull-right" data-toggle="tooltip" data-placement="top"  id="clickToCopy"  title="Click to Copy!">DEAL{{$deal}}</span>
-                <span class="blink-link pull-right">Copy your <span class="label label-warning">Deal</span> code NOW!    <i class="fa fa-arrow-right"></i> </span>
+            <div id="deal{{$deal['amount']}}-body" >
+                <span class="btn btn-default btn-white pull-right" data-toggle="tooltip" data-placement="top"  id="clickToCopy{{$deal['amount']}}"  title="Click to Copy!">DEAL{{$deal['amount']}}</span>
+                <span class="blink-link pull-right">Copy your <span class="label label-warning">Deal</span> code NOW!<i class="fa fa-arrow-right"></i> </span>
             </div>
         </div>
         @endforeach
