@@ -2,14 +2,14 @@
 
 @section('content')
     <link href="/css/custome/howItWorks.css" rel="stylesheet">
+
     <div class="container">
             <div class="row center-block" id="row-main" >
-                <div id="hearder">
-                    <p class="lead" >Get <span class="label label-success">130$</span> worth of gifts on <span class="label label-default">$</span> you spend.
+                <div class="col-md-12 config">
+                    <img class="img-responsive img-circle" src="/images/how/login.png" width="100" height="100" id="login">
                 </div>
-                <div id="body" >
-                    <span class="btn btn-default btn-white pull-right" data-toggle="tooltip" data-placement="top"  id="clickToCopy"  title="Click to Copy!">DEAL</span>
-                    <span class="blink-link pull-right">Copy your <span class="label label-warning">Deal</span> code NOW!<i class="fa fa-arrow-right"></i> </span>
+                <div class="col-md-12" >
+
                 </div>
             </div>
     </div>

@@ -3,3 +3,9 @@
     border-radius: 4px;
     width: 800px;
 }
+.config{
+    margin-right: 20px;
+}
+#login{
+    float: right;
+}
