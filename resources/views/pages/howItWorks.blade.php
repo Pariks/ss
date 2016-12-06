@@ -37,6 +37,11 @@
                 <div class="col-md-10 col-md-offset-1 divider">
 
                 </div>
+                <div class="col-md-12" id="config">
+                    <img class="img-responsive img-circle pull-right" src="/images/how/payment.png" width="100" height="100" style="padding-top: 20px;">
+                    <span class="pull-left" id="span-left">Make Payment</span>
+                    <p class="pull-left" id="small-paragraph-left">Finalize details and continue to make payments and relax</p>
+                </div>
             </div>
     </div>
 @endsection
