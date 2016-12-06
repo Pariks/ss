@@ -1,11 +1,49 @@
 #row-main{
-    border: 2px solid #64FFDA;
+    border: 2px solid #03A9F4;
     border-radius: 4px;
-    width: 800px;
+    width: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-.config{
-    margin-right: 20px;
+#config{
+  padding: 20px;
 }
-#login{
-    float: right;
+
+#span-left{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: left;
+}
+#small-paragraph-left{
+    padding-left: 20px;
+    text-align: left;
+}
+
+#span-right{
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: right;
+
+}
+
+#small-paragraph-right{
+    padding-right: 20px;
+    text-align: right;
+}
+.divider{
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+}
+
+
+#home{
+    padding-top: 20px;
+
 }
