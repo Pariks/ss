@@ -2,19 +2,7 @@
 
 @section('content')
     <link href="/css/custome/aboutUs.css" rel="stylesheet">
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">About Us</div>
-                    <div class="panel-body">
-                        <h1>Hello, {!! $user->name !!} </h1>
-                        You are logged in {!! $user->email !!}!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="container">
         <div class="row center-block" id="row-aboutUs">
             <div class="col-md-4 col-md-offset-4">
