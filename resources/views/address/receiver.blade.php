@@ -31,8 +31,15 @@
         <label for="giftlink" class="col-md-4 control-label">Gift Reference Link</label>
 
         <div class="col-md-6">
-            <input id="giftlink" type="text" class="form-control" name="giftlink" value="{{ old('giftlink') }}" placeholder="Example: https://www.amazon.ca/Xbox-Wireless-Controller-White-Newest/dp/B01GW3H3U8/" >
+            <input id="giftlink" type="text" class="form-control" name="giftlink" value="{{ old('giftlink') }}" placeholder="Example:(optional) https://www.amazon.ca/Xbox-Wireless-Controller-White-Newest/dp/B01GW3H3U8/" >
 
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone" class="col-md-4 control-label">Phone No.</label>
+
+        <div class="col-md-6">
+            <input id="phone" type="text" class="form-control" name="phone" placeholder="+1-514-123-6789 (optional)" required>
         </div>
     </div>
     <div class="form-group{{ $errors->has('receiveraddr1') ? ' has-error' : '' }}">
@@ -61,19 +68,7 @@
             @endif
         </div>
     </div>
-    <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-        <label for="phone" class="col-md-4 control-label">Phone No.</label>
 
-        <div class="col-md-6">
-            <input id="phone" type="text" class="form-control" name="phone" placeholder="+1-514-123-6789" required>
-
-            @if ($errors->has('phone'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
-            @endif
-        </div>
-    </div>
     <div class="form-group{{ $errors->has('postalcode') ? ' has-error' : '' }}">
         <label for="postalcode" class="col-md-4 control-label">Postal Code</label>
 
@@ -120,7 +115,7 @@
         <label for="contry" class="col-md-4 control-label">Deal Code</label>
 
         <div class="col-md-6">
-            <input id="dealcode" type="text" class="form-control" name="dealcode" placeholder="Example: DEAL100" required>
+            <input id="dealcode" type="text" class="form-control" name="dealcode" placeholder="Example: DEAL100 (if applicable)" required>
         </div>
     </div>
 
