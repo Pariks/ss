@@ -115,6 +115,15 @@
             @endif
         </div>
     </div>
+
+    <div class="form-group">
+        <label for="contry" class="col-md-4 control-label">Deal Code</label>
+
+        <div class="col-md-6">
+            <input id="dealcode" type="text" class="form-control" name="dealcode" placeholder="Example: DEAL100" required>
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="col-md-6 col-md-offset-4">
             <button type="submit" class="btn btn-primary pull-right">

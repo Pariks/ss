@@ -35,7 +35,6 @@
             {{ csrf_field() }}
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Fill out details and send gift</h4>
