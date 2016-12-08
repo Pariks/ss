@@ -13,28 +13,33 @@
             </div>
             <div class="col-md-12">
                 <h3>Who We Are</h3>
-                <p id="paragraph">We are group of developers turned entrepreneurs. We carry modern sense of business which involves creating web services with help of technology that makes human life easy, safe, secure and fast.</p>
+                <p id="paragraph">We are group of developers turned entrepreneurs.
+                                    We carry modern sense of business which involves creating web services with help of technology
+                                    that makes human life easy, safe, secure and fast.</p>
             </div>
             <div class="col-md-10 col-md-offset-1 divider">
 
             </div>
             <div class="col-md-12">
-                <h3>We Buy</h3>
-                <p>We Buy best gift or gifts from all available options.</p>
+                <h3>Our Vision</h3>
+                <p id="paragraph">Our vision is to lower human stress of making small yet very important decision as much as possible.
+                                    One such stress is buying gift for loved one or some one and we want help world in reducing such stress.</p>
             </div>
             <div class="col-md-10 col-md-offset-1 divider">
 
             </div>
             <div class="col-md-12">
-                <h3>We Wrap&Send</h3>
-                <p>We wrap your gift in nice wrapper and we send it to the receiver's address.</p>
+                <h3>Our Mission</h3>
+                <p id="paragraph">We are on mission to reduce daily decision making stress by replacing it with technology
+                                    driven by deep learning, artificial intelligence and neural networks.</p>
             </div>
             <div class="col-md-10 col-md-offset-1 divider">
 
             </div>
             <div class="col-md-12">
-                <h3>You Relax</h3>
-                <p>You relax and enjoy hassle free gifting service.</p>
+                <h3>Our Goal</h3>
+                <p id="paragraph">Our goal is to next Uber of gifts. We want to allow users to sale their gifts because
+                    we get many gift out of which some we don't want or we don't need that can sell on our site. so that other user, who needs it can use it.</p>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="jumbotron" style="background-image: url('/images/slideshow/3.jpg'); width: 100%; height: 300px;">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -43,6 +44,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">Sender's Detail - Billing Address</div>
                                 <div class="panel-body">
+                                   
                                    @include('address.sender')
                                 </div>
                             </div>

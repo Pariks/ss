@@ -1,4 +1,5 @@
-    <div class="form-group{{ $errors->has('sendername') ? ' has-error' : '' }}">
+
+     <div class="form-group{{ $errors->has('sendername') ? ' has-error' : '' }}">
         <label for="sendername" class="col-md-4 control-label"><i class="fa fa-user"></i> Name</label>
 
         <div class="col-md-6">
@@ -16,7 +17,7 @@
         <label for="senderaddr1" class="col-md-4 control-label">Address 1</label>
 
         <div class="col-md-6">
-            <input id="senderaddr1" type="text" class="form-control" name="senderaddr1" value="{{ old('addr1') }}" placeholder="Example: 1445 Du Fort" required>
+            <input id="senderaddr1" type="text" class="form-control" name="senderaddr1" value="{{  old('addr1')}}" placeholder="Example: 1445 Du Fort" required>
 
             @if ($errors->has('senderaddr1'))
                 <span class="help-block">

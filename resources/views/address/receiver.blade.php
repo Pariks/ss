@@ -118,7 +118,11 @@
             <input id="dealcode" type="text" class="form-control" name="dealcode" placeholder="Example: DEAL100 (if applicable)" required>
         </div>
     </div>
-
+    <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+            <div class="g-recaptcha" data-sitekey="6LfLRA4UAAAAAJTMRd3h2l0M01tXqRBoHZfLrjPP"></div>
+        </div>
+    </div>
     <div class="form-group">
         <div class="col-md-6 col-md-offset-4">
             <button type="submit" class="btn btn-primary pull-right">
@@ -126,4 +130,7 @@
             </button>
         </div>
     </div>
+
+
+
 
