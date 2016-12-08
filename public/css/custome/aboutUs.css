@@ -1,0 +1,21 @@
+.divider{
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #B0BEC5, #f0f0f0);
+}
+
+#row-aboutUs{
+    border: 2px solid #B2FF59;
+    border-radius: 4px;
+    width: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-top: 10px;
+
+}
+
+#paragraph{
+    text-align: justify;
+}
