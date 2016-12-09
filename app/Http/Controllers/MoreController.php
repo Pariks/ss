@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Rating;
 
 class MoreController extends Controller
 {
@@ -18,6 +19,17 @@ class MoreController extends Controller
     }
     public function feedback()
     {
+        $post = new Rating();
+
+        $rating = new \willvincent\Rateable\Rating();
+        $rating->rating = 5;
+        $rating->user_id = \Auth::id();
+        $rating->rateable_id = 1;
+        $post->rateable_id = 1;
+        //dd($rating);
+        $post->ratings()->save($rating);
+
+
         return view('more.feedback');
     }
     public function learnHow()

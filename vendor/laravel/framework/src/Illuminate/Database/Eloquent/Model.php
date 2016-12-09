@@ -1570,7 +1570,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
         // the query builder, which will give us back the final inserted ID for this
         // table from the database. Not all tables have to be incrementing though.
         $attributes = $this->attributes;
-
+      
         if ($this->getIncrementing()) {
             $this->insertAndSetId($query, $attributes);
         }

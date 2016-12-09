@@ -10,8 +10,8 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
@@ -22,6 +22,10 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
     );
 
     public static $prefixLengthsPsr4 = array (
+        'w' => 
+        array (
+            'willvincent\\Rateable\\' => 21,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -99,6 +103,8 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         'C' => 
         array (
             'ClassPreloader\\' => 15,
+            'Cartalyst\\Support\\' => 18,
+            'Cartalyst\\Sentinel\\' => 19,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -108,6 +114,10 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
     );
 
     public static $prefixDirsPsr4 = array (
+        'willvincent\\Rateable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -266,6 +276,14 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         array (
             0 => __DIR__ . '/..' . '/classpreloader/classpreloader/src',
         ),
+        'Cartalyst\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cartalyst/support/src',
+        ),
+        'Cartalyst\\Sentinel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cartalyst/sentinel/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -349,6 +367,81 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
+        'Cartalyst\\Sentinel\\Activations\\ActivationInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Activations/ActivationInterface.php',
+        'Cartalyst\\Sentinel\\Activations\\ActivationRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Activations/ActivationRepositoryInterface.php',
+        'Cartalyst\\Sentinel\\Activations\\EloquentActivation' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Activations/EloquentActivation.php',
+        'Cartalyst\\Sentinel\\Activations\\IlluminateActivationRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Activations/IlluminateActivationRepository.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\ActivationCheckpoint' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/ActivationCheckpoint.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\AuthenticatedCheckpoint' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/AuthenticatedCheckpoint.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\CheckpointInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/CheckpointInterface.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\NotActivatedException' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/NotActivatedException.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\ThrottleCheckpoint' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/ThrottleCheckpoint.php',
+        'Cartalyst\\Sentinel\\Checkpoints\\ThrottlingException' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Checkpoints/ThrottlingException.php',
+        'Cartalyst\\Sentinel\\Cookies\\CICookie' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Cookies/CICookie.php',
+        'Cartalyst\\Sentinel\\Cookies\\CookieInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Cookies/CookieInterface.php',
+        'Cartalyst\\Sentinel\\Cookies\\FuelPHPCookie' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Cookies/FuelPHPCookie.php',
+        'Cartalyst\\Sentinel\\Cookies\\IlluminateCookie' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Cookies/IlluminateCookie.php',
+        'Cartalyst\\Sentinel\\Cookies\\NativeCookie' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Cookies/NativeCookie.php',
+        'Cartalyst\\Sentinel\\Hashing\\BcryptHasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/BcryptHasher.php',
+        'Cartalyst\\Sentinel\\Hashing\\CallbackHasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/CallbackHasher.php',
+        'Cartalyst\\Sentinel\\Hashing\\Hasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/Hasher.php',
+        'Cartalyst\\Sentinel\\Hashing\\HasherInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/HasherInterface.php',
+        'Cartalyst\\Sentinel\\Hashing\\NativeHasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/NativeHasher.php',
+        'Cartalyst\\Sentinel\\Hashing\\Sha256Hasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/Sha256Hasher.php',
+        'Cartalyst\\Sentinel\\Hashing\\WhirlpoolHasher' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Hashing/WhirlpoolHasher.php',
+        'Cartalyst\\Sentinel\\Laravel\\Facades\\Activation' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Laravel/Facades/Activation.php',
+        'Cartalyst\\Sentinel\\Laravel\\Facades\\Reminder' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Laravel/Facades/Reminder.php',
+        'Cartalyst\\Sentinel\\Laravel\\Facades\\Sentinel' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Laravel/Facades/Sentinel.php',
+        'Cartalyst\\Sentinel\\Laravel\\SentinelServiceProvider' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Laravel/SentinelServiceProvider.php',
+        'Cartalyst\\Sentinel\\Native\\ConfigRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Native/ConfigRepository.php',
+        'Cartalyst\\Sentinel\\Native\\Facades\\Sentinel' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Native/Facades/Sentinel.php',
+        'Cartalyst\\Sentinel\\Native\\SentinelBootstrapper' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Native/SentinelBootstrapper.php',
+        'Cartalyst\\Sentinel\\Permissions\\PermissibleInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/PermissibleInterface.php',
+        'Cartalyst\\Sentinel\\Permissions\\PermissibleTrait' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/PermissibleTrait.php',
+        'Cartalyst\\Sentinel\\Permissions\\PermissionsInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/PermissionsInterface.php',
+        'Cartalyst\\Sentinel\\Permissions\\PermissionsTrait' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/PermissionsTrait.php',
+        'Cartalyst\\Sentinel\\Permissions\\StandardPermissions' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/StandardPermissions.php',
+        'Cartalyst\\Sentinel\\Permissions\\StrictPermissions' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Permissions/StrictPermissions.php',
+        'Cartalyst\\Sentinel\\Persistences\\EloquentPersistence' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Persistences/EloquentPersistence.php',
+        'Cartalyst\\Sentinel\\Persistences\\IlluminatePersistenceRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Persistences/IlluminatePersistenceRepository.php',
+        'Cartalyst\\Sentinel\\Persistences\\PersistableInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Persistences/PersistableInterface.php',
+        'Cartalyst\\Sentinel\\Persistences\\PersistenceInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Persistences/PersistenceInterface.php',
+        'Cartalyst\\Sentinel\\Persistences\\PersistenceRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Persistences/PersistenceRepositoryInterface.php',
+        'Cartalyst\\Sentinel\\Reminders\\EloquentReminder' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Reminders/EloquentReminder.php',
+        'Cartalyst\\Sentinel\\Reminders\\IlluminateReminderRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Reminders/IlluminateReminderRepository.php',
+        'Cartalyst\\Sentinel\\Reminders\\ReminderRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Reminders/ReminderRepositoryInterface.php',
+        'Cartalyst\\Sentinel\\Roles\\EloquentRole' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Roles/EloquentRole.php',
+        'Cartalyst\\Sentinel\\Roles\\IlluminateRoleRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Roles/IlluminateRoleRepository.php',
+        'Cartalyst\\Sentinel\\Roles\\RoleInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Roles/RoleInterface.php',
+        'Cartalyst\\Sentinel\\Roles\\RoleRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Roles/RoleRepositoryInterface.php',
+        'Cartalyst\\Sentinel\\Roles\\RoleableInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Roles/RoleableInterface.php',
+        'Cartalyst\\Sentinel\\Sentinel' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sentinel.php',
+        'Cartalyst\\Sentinel\\Sessions\\CISession' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sessions/CISession.php',
+        'Cartalyst\\Sentinel\\Sessions\\FuelPHPSession' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sessions/FuelPHPSession.php',
+        'Cartalyst\\Sentinel\\Sessions\\IlluminateSession' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sessions/IlluminateSession.php',
+        'Cartalyst\\Sentinel\\Sessions\\NativeSession' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sessions/NativeSession.php',
+        'Cartalyst\\Sentinel\\Sessions\\SessionInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Sessions/SessionInterface.php',
+        'Cartalyst\\Sentinel\\Throttling\\EloquentThrottle' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Throttling/EloquentThrottle.php',
+        'Cartalyst\\Sentinel\\Throttling\\IlluminateThrottleRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Throttling/IlluminateThrottleRepository.php',
+        'Cartalyst\\Sentinel\\Throttling\\ThrottleRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Throttling/ThrottleRepositoryInterface.php',
+        'Cartalyst\\Sentinel\\Users\\EloquentUser' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Users/EloquentUser.php',
+        'Cartalyst\\Sentinel\\Users\\IlluminateUserRepository' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Users/IlluminateUserRepository.php',
+        'Cartalyst\\Sentinel\\Users\\UserInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Users/UserInterface.php',
+        'Cartalyst\\Sentinel\\Users\\UserRepositoryInterface' => __DIR__ . '/..' . '/cartalyst/sentinel/src/Users/UserRepositoryInterface.php',
+        'Cartalyst\\Support\\Collection' => __DIR__ . '/..' . '/cartalyst/support/src/Collection.php',
+        'Cartalyst\\Support\\Contracts\\NamespacedEntityInterface' => __DIR__ . '/..' . '/cartalyst/support/src/Contracts/NamespacedEntityInterface.php',
+        'Cartalyst\\Support\\Contracts\\ValidatorInterface' => __DIR__ . '/..' . '/cartalyst/support/src/Contracts/ValidatorInterface.php',
+        'Cartalyst\\Support\\Handlers\\EventHandler' => __DIR__ . '/..' . '/cartalyst/support/src/Handlers/EventHandler.php',
+        'Cartalyst\\Support\\Handlers\\EventHandlerInterface' => __DIR__ . '/..' . '/cartalyst/support/src/Handlers/EventHandlerInterface.php',
+        'Cartalyst\\Support\\Mailer' => __DIR__ . '/..' . '/cartalyst/support/src/Mailer.php',
+        'Cartalyst\\Support\\ServiceProvider' => __DIR__ . '/..' . '/cartalyst/support/src/ServiceProvider.php',
+        'Cartalyst\\Support\\Traits\\ContainerTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/ContainerTrait.php',
+        'Cartalyst\\Support\\Traits\\EventTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/EventTrait.php',
+        'Cartalyst\\Support\\Traits\\MailerTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/MailerTrait.php',
+        'Cartalyst\\Support\\Traits\\NamespacedEntityTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/NamespacedEntityTrait.php',
+        'Cartalyst\\Support\\Traits\\RepositoryTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/RepositoryTrait.php',
+        'Cartalyst\\Support\\Traits\\ValidatorTrait' => __DIR__ . '/..' . '/cartalyst/support/src/Traits/ValidatorTrait.php',
+        'Cartalyst\\Support\\Validator' => __DIR__ . '/..' . '/cartalyst/support/src/Validator.php',
         'ClassPreloader\\ClassList' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassList.php',
         'ClassPreloader\\ClassLoader' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassLoader.php',
         'ClassPreloader\\ClassNode' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassNode.php',
@@ -1887,7 +1980,10 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
+        'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
+        'PHPUnit\\Framework\\TestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestListener.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
         'PHPUnit_Extensions_PhptTestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',
@@ -2813,6 +2909,7 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         'SuperClosure\\Analyzer\\Visitor\\MagicConstantVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/Visitor/MagicConstantVisitor.php',
         'SuperClosure\\Analyzer\\Visitor\\ThisDetectorVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/Visitor/ThisDetectorVisitor.php',
         'SuperClosure\\Exception\\ClosureAnalysisException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureAnalysisException.php',
+        'SuperClosure\\Exception\\ClosureSerializationException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureSerializationException.php',
         'SuperClosure\\Exception\\ClosureUnserializationException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureUnserializationException.php',
         'SuperClosure\\Exception\\SuperClosureException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/SuperClosureException.php',
         'SuperClosure\\SerializableClosure' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/SerializableClosure.php',
@@ -3401,6 +3498,10 @@ class ComposerStaticInitff25ccd485f33fb43c0d82c3f1706d8f
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'willvincent\\Rateable\\MigrationCommand' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/commands/MigrationCommand.php',
+        'willvincent\\Rateable\\Rateable' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/Rateable.php',
+        'willvincent\\Rateable\\RateableServiceProvider' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/RateableServiceProvider.php',
+        'willvincent\\Rateable\\Rating' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable/Rating.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

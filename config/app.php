@@ -166,6 +166,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Spatie\LinkChecker\LinkCheckerServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        willvincent\Rateable\RateableServiceProvider::class,
 
         /*
          * Package Service Providers...
