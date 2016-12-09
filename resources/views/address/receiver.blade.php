@@ -42,7 +42,7 @@
             <input id="phone" type="text" class="form-control" name="phone" placeholder="+1-514-123-6789 (optional)" required>
         </div>
     </div>
-    <div class="form-group{{ $errors->has('receiveraddr1') ? ' has-error' : '' }}">
+    <div class="form-group{{ $errors->has('addr1') ? ' has-error' : '' }}">
         <label for="addr1" class="col-md-4 control-label">Address 1</label>
 
         <div class="col-md-6">
@@ -119,7 +119,8 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-md-6 col-md-offset-4">
+        <label   class="col-md-4 control-label">Enter Captcha</label>
+        <div class="col-md-6">
             <div class="g-recaptcha" data-sitekey="6LfLRA4UAAAAAJTMRd3h2l0M01tXqRBoHZfLrjPP"></div>
         </div>
     </div>

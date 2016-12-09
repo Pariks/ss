@@ -44,7 +44,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">Sender's Detail - Billing Address</div>
                                 <div class="panel-body">
-                                   
+
                                    @include('address.sender')
                                 </div>
                             </div>
