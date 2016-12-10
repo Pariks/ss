@@ -34,6 +34,7 @@ Route::group(['middleware' => 'authenticated'], function(){
     Route::get('profile', 'ProfileController@index');
     Route::get('contactUs',  'MoreController@contactUs');
     Route::get('feedback', 'MoreController@feedback');
+    Route::post('feedback', 'MoreController@postFeedback');
 });
 Route::post('profile', 'ProfileController@updateAvatar');
 

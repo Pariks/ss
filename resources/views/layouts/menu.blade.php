@@ -88,7 +88,7 @@
                                     Deals
                                 </a>
                             </li>
-
+                            <li class="divider"></li>
                             <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();

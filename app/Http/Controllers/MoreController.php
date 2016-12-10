@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Feedbacks;
 use Illuminate\Http\Request;
 use App\Rating;
-
+use Auth;
 class MoreController extends Controller
 {
 
@@ -19,18 +21,63 @@ class MoreController extends Controller
     }
     public function feedback()
     {
-        $post = new Rating();
-
-        $rating = new \willvincent\Rateable\Rating();
-        $rating->rating = 5;
-        $rating->user_id = \Auth::id();
-        $rating->rateable_id = 1;
-        $post->rateable_id = 1;
-        //dd($rating);
-        $post->ratings()->save($rating);
-
-
         return view('more.feedback');
+    }
+    public function postFeedback(Request $request)
+    {
+        $message = $request['message'];
+        $rating = $request['rating'];
+        $user = Auth::user();
+
+        $data = array();
+        $data['captcha'] = false;
+        $data['ratingValue'] = false;
+        $data['feedbackSent'] = false;
+
+        
+        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+
+            $secret = '6LfLRA4UAAAAAIJXHp2dGqwpNLUSjpFhSM1V1emA';
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $captcha = $_POST['g-recaptcha-response'];
+            $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$captcha.'&remoteip'.$ip);
+            $responseArr = json_decode($response, true);
+
+            if($responseArr['success']){
+                $data['captcha'] = true;
+            }else{
+                $data['captcha'] = false;
+            }
+        }
+        
+        if(isset($rating) && !empty($rating) && $data['captcha'] === true) {
+            $post = new Rating;
+            $post->rating = $rating;
+            $post->user_id = \Auth::id();
+            $post->rateable_id = 1;
+            $post->rateable_type = 'App\Rating';
+            $post->created_at =new \DateTime;
+            $post->updated_at =new \DateTime;
+
+            if ($post->save()) {
+                $data['ratingValue'] = true;
+            }
+        } 
+        
+        if(isset($message) && !empty($message) && $data['ratingValue'] === true && $data['captcha'] === true) {
+            $post = new Feedbacks;
+            $post->message = $message;
+            $post->user_id = \Auth::id();
+            $post->rating = $rating;
+            $post->created_at =new \DateTime;
+            $post->updated_at = new \DateTime;
+            
+            if ($post->save()) {
+                $data['feedbackSent'] = true;
+            }
+        }
+
+        return view('more.feedback')->with('data', $data);
     }
     public function learnHow()
     {

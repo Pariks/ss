@@ -1,6 +1,36 @@
 @extends('layouts.master')
 
 @section('content')
+    @if(isset($data) && array_key_exists('captcha', $data))
+        @if($data['captcha'] === false)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-danger" style="text-align: center;">
+                        <strong >Error: Please Enter Captcha!</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+    @endif
+    @if(isset($data) && array_key_exists('ratingValue', $data) && $data['captcha'] === true)
+        @if($data['ratingValue'] === true &&  $data['feedbackSent'] === true)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-success" style="text-align: center;">
+                         <strong >Feedback sent Successfully!</strong>
+                   </div>
+                </div>
+            </div>
+        @else
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-danger" style="text-align: center;">
+                        <strong >Error: Please fill all fields and resubmit feedback!</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -18,6 +48,30 @@
 
                                     </div>
                                 </div>
+                                <div class="form-group{{ $errors->has('rating') ? ' has-error' : '' }}">
+                                    <label for="rating" class="col-md-4 control-label">Ratning</label>
+                                    <div class="col-md-6">
+                                        <select class="form-control" id="rating" name="rating"  >
+                                            <option value="" disabled selected>Rate out of 5</option>
+                                            <option value="1">1</option>
+                                            <option value="1.5">1.5</option>
+                                            <option value="2">2</option>
+                                            <option value="2.5">2.5</option>
+                                            <option value="3">3</option>
+                                            <option value="3.5">3.5</option>
+                                            <option value="4">4</option>
+                                            <option value="4.5">4.5</option>
+                                            <option value="5">5</option>
+                                        </select>
+
+                                        @if ($errors->has('rating'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('rating') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
                                 <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
                                     <label for="message" class="col-md-4 control-label">Feedback</label>
 
