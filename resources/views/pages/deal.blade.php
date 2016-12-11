@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <script src="/js/custome/deals.js"></script>
+
     <div class="container">
         @foreach($deals as $deal)
         <div class="row center-block" id="deal{{$deal['amount']}}">
@@ -35,4 +35,6 @@
         </div>
         @endforeach
     </div>
+    <script src="/js/custome/deals.js"></script>
+    <script src="/js/notification/notify.js"></script>
 @endsection

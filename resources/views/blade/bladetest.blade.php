@@ -120,7 +120,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-default " >
                             <div class="card card-block" style="margin: 10px;">
-                                <h3 class="card-title">How We Works</h3>
+                                <h3 class="card-title">How We Work</h3>
                                 <p class="card-text">If you are confuse what to gift on christmas? and if you want to be mordern SecretSanta then we are here to solve youjr problem. </p>
                                 <br><a href="/howItWorks" class="btn btn-success" >Know More</a>
                             </div>

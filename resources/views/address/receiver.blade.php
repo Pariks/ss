@@ -15,7 +15,7 @@
         <label for="amount" class="col-md-4 control-label">Gift Amount</label>
 
         <div class="col-md-6">
-            <input id="amount" type="text" class="form-control" name="amount" value="{{ old('amount') }}" placeholder="Example: 50, 100, 200" required>
+            <input id="amount" type="number" min="0" class="form-control" name="amount" onkeypress="return isNumberKey(event)" value="{{ old('amount') }}" placeholder="Example: 50, 100, 200" required>
 
         </div>
     </div>
@@ -35,13 +35,15 @@
 
         </div>
     </div>
+
     <div class="form-group">
         <label for="phone" class="col-md-4 control-label">Phone No.</label>
 
         <div class="col-md-6">
-            <input id="phone" type="text" class="form-control" name="phone" placeholder="+1-514-123-6789 (optional)" required>
+            <input id="phone" type="text" class="form-control" name="phone" placeholder="+1-514-123-6789 (optional)" >
         </div>
     </div>
+
     <div class="form-group{{ $errors->has('addr1') ? ' has-error' : '' }}">
         <label for="addr1" class="col-md-4 control-label">Address 1</label>
 
@@ -131,6 +133,14 @@
             </button>
         </div>
     </div>
+    <script>
+        function isNumberKey(evt){
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
 
 
 

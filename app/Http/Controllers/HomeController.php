@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Captcha;
+use App\Receiver;
+use App\Sender;
+use Auth;
 use Illuminate\Http\Request;
 use League\Flysystem\Exception;
 
@@ -26,27 +30,44 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function payment()
+    public function orders(Request $request)
     {
 
-        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+        $user = Auth::user();
+        $data = array();
+        $captcha = new Captcha();
+        $data['captcha'] =  $captcha->verifyCaptcha();
 
-            $secret = '6LfLRA4UAAAAAIJXHp2dGqwpNLUSjpFhSM1V1emA';
-            $ip = $_SERVER['REMOTE_ADDR'];
-            $captcha = $_POST['g-recaptcha-response'];
-            $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$captcha.'&remoteip'.$ip);
-            $responseArr = json_decode($response, true);
+        $postSender = new Sender;
+        $postSender->name = $request['senderName'];
+        $postSender->loggedIn_userId = Auth::id();
+        $postSender->addr1 = $request['senderaddr1'];
+        $postSender->addr2 = $request['senderaddr2'];
+        $postSender->phone_no= $request['senderphone'];
+        $postSender->postal_code = $request['senderpostalcode'];
+        $postSender->city = $request['sendercity'];
+        $postSender->country = $request['sendercontry'];
+        $postSender->created_at = new \DateTime;
+        $postSender->updated_at = new \DateTime;
+        $postSender->save();
 
-            if($responseArr['success']){
-                echo 'done';
-            }else{
-                echo 'Spam';
-            }
+        $postReceiver = new Receiver;
+        $postReceiver->name = $request['name'];
+        $postReceiver->loggedIn_userId = Auth::id();
+        $postReceiver->gift_amount = $request['amount'];
+        $postReceiver->age_range = $request['agerange'];
+        $postReceiver->gift_link = $request['giftlink'];
+        $postReceiver->phone_no= $request['phone'];
+        $postReceiver->addr1 = $request['addr1'];
+        $postReceiver->addr2 = $request['addr2'];        
+        $postReceiver->postal_code = $request['postalcode'];
+        $postReceiver->city = $request['city'];
+        $postReceiver->country = $request['contry'];
+        $postReceiver->dealCode = $request['dealcode'];
+        $postReceiver->created_at = new \DateTime;
+        $postReceiver->updated_at = new \DateTime;
+        $postReceiver->save();
 
-        }else{
-            var_dump($_POST['addr1']);
-            view('home')->with('post', ['hi'=>'hello']);
-        }
         return view('home');
     }
 }

@@ -25,9 +25,6 @@ Route::get('users/create', ['uses' => 'UserController@create']);
 Route::post('users', ['uses' => 'UserController@store']);*/
 Auth::routes();
 
-
-Route::post('procedeToPayment', 'HomeController@payment');
-Route::get('procedeToPayment', 'HomeController@payment');
 //Routes that requires authentication
 Route::group(['middleware' => 'authenticated'], function(){
     Route::get('home', 'HomeController@index');
