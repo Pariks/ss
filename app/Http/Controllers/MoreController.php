@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Contact;
 use App\Feedbacks;
 use Illuminate\Http\Request;
 use App\Rating;
@@ -19,38 +20,46 @@ class MoreController extends Controller
     {
         return view('more.contactUs');
     }
+    public function postContactUs(Request $request)
+    {
+        $message = $request['message'];      
+        $user = Auth::user();
+        $data = array();
+        $data['captcha'] = $this->checkCaptcha();
+        $data['messageSubmitted'] = false;
+        
+        if(isset($message) && !empty($message) && $data['captcha'] === true)
+        {
+            $post = new Contact;
+            $post->message = $message;
+            $post->user_id = \Auth::id();            
+            $post->created_at =new \DateTime;
+            $post->updated_at = new \DateTime;
+
+            if ($post->save()) {
+                $data['messageSubmitted'] = true;
+            }
+        }        
+        
+        return view('more.contactUs')->with('data', $data);
+    }
     public function feedback()
     {
         return view('more.feedback');
     }
     public function postFeedback(Request $request)
     {
-        $message = $request['message'];
-        $rating = $request['rating'];
-        $user = Auth::user();
+        $feedback = $request['feedback'];
+        $rating = $request['rating'];     
 
         $data = array();
-        $data['captcha'] = false;
-        $data['ratingValue'] = false;
-        $data['feedbackSent'] = false;
-
+        $data['captcha'] = $this->checkCaptcha();
+        $data['ratingGiven'] = false;
+        $data['feedbackGiven'] = false;
+   
         
-        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-
-            $secret = '6LfLRA4UAAAAAIJXHp2dGqwpNLUSjpFhSM1V1emA';
-            $ip = $_SERVER['REMOTE_ADDR'];
-            $captcha = $_POST['g-recaptcha-response'];
-            $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$captcha.'&remoteip'.$ip);
-            $responseArr = json_decode($response, true);
-
-            if($responseArr['success']){
-                $data['captcha'] = true;
-            }else{
-                $data['captcha'] = false;
-            }
-        }
-        
-        if(isset($rating) && !empty($rating) && $data['captcha'] === true) {
+        if(isset($rating) && !empty($rating) && $data['captcha'] === true) 
+        {
             $post = new Rating;
             $post->rating = $rating;
             $post->user_id = \Auth::id();
@@ -60,20 +69,21 @@ class MoreController extends Controller
             $post->updated_at =new \DateTime;
 
             if ($post->save()) {
-                $data['ratingValue'] = true;
+                $data['ratingGiven'] = true;
             }
         } 
         
-        if(isset($message) && !empty($message) && $data['ratingValue'] === true && $data['captcha'] === true) {
+        if(isset($feedback) && !empty($feedback) && $data['ratingGiven'] === true && $data['captcha'] === true)
+        {
             $post = new Feedbacks;
-            $post->message = $message;
+            $post->feedback = $feedback;
             $post->user_id = \Auth::id();
             $post->rating = $rating;
             $post->created_at =new \DateTime;
             $post->updated_at = new \DateTime;
             
             if ($post->save()) {
-                $data['feedbackSent'] = true;
+                $data['feedbackGiven'] = true;
             }
         }
 
@@ -82,6 +92,26 @@ class MoreController extends Controller
     public function learnHow()
     {
         return view('more.learnHow');
+    }
+    
+    public function checkCaptcha()
+    {        
+        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+        {
+            $secret = '6LfLRA4UAAAAAIJXHp2dGqwpNLUSjpFhSM1V1emA';
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $captcha = $_POST['g-recaptcha-response'];
+            $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$captcha.'&remoteip'.$ip);
+            $responseArr = json_decode($response, true);
+
+            if($responseArr['success']){
+               return true;
+            }else{
+                return false;
+            }
+        }
+        
+        return false;
     }
     /**
      * Display a listing of the resource.

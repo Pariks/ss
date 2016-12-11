@@ -25,14 +25,16 @@ Route::get('users/create', ['uses' => 'UserController@create']);
 Route::post('users', ['uses' => 'UserController@store']);*/
 Auth::routes();
 
-Route::get('home', 'HomeController@index');
+
 Route::post('procedeToPayment', 'HomeController@payment');
 Route::get('procedeToPayment', 'HomeController@payment');
 //Routes that requires authentication
 Route::group(['middleware' => 'authenticated'], function(){
-
+    Route::get('home', 'HomeController@index');
+    Route::post('home', 'HomeController@orders');
     Route::get('profile', 'ProfileController@index');
     Route::get('contactUs',  'MoreController@contactUs');
+    Route::post('contactUs',  'MoreController@postContactUs');
     Route::get('feedback', 'MoreController@feedback');
     Route::post('feedback', 'MoreController@postFeedback');
 });

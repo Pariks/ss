@@ -32,7 +32,7 @@
                 </p>
             </div>
         </div>
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('/procedeToPayment') }}">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('/home') }}">
             {{ csrf_field() }}
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">

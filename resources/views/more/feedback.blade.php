@@ -12,8 +12,8 @@
             </div>
         @endif
     @endif
-    @if(isset($data) && array_key_exists('ratingValue', $data) && $data['captcha'] === true)
-        @if($data['ratingValue'] === true &&  $data['feedbackSent'] === true)
+    @if(isset($data) && array_key_exists('ratingGiven', $data) && $data['captcha'] === true)
+        @if($data['ratingGiven'] === true &&  $data['feedbackGiven'] === true)
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2  alert alert-success" style="text-align: center;">
@@ -72,15 +72,15 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
-                                    <label for="message" class="col-md-4 control-label">Feedback</label>
+                                <div class="form-group{{ $errors->has('feedback') ? ' has-error' : '' }}">
+                                    <label for="feedback" class="col-md-4 control-label">Feedback</label>
 
                                     <div class="col-md-6">
-                                        <textarea id="message" type="text" rows="8" class="form-control" name="message" value="{{ old('message') }}" placeholder="Hi, I love your service. Keep being awesome. thanks" required></textarea>
+                                        <textarea id="feedback" type="text" rows="8" class="form-control" name="feedback" value="{{ old('feedback') }}" placeholder="Hi, I love your service. Keep being awesome. thanks" required></textarea>
 
-                                        @if ($errors->has('message'))
+                                        @if ($errors->has('feedback'))
                                             <span class="help-block">
-                                        <strong>{{ $errors->first('message') }}</strong>
+                                        <strong>{{ $errors->first('feedback') }}</strong>
                                     </span>
                                         @endif
                                     </div>

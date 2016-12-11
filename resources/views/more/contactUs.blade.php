@@ -1,13 +1,43 @@
 @extends('layouts.master')
 
 @section('content')
+    @if(isset($data) && array_key_exists('captcha', $data))
+        @if($data['captcha'] === false)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-danger" style="text-align: center;">
+                        <strong >Error: Please Enter Captcha!</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+    @endif
+    @if(isset($data) && array_key_exists('messageSubmitted', $data) && $data['captcha'] === true)
+        @if($data['messageSubmitted'] === true)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-success" style="text-align: center;">
+                        <strong >Your message sent Successfully!</strong>
+                    </div>
+                </div>
+            </div>
+        @else
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2  alert alert-danger" style="text-align: center;">
+                        <strong >Error: Please resubmit for message!</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading"><h2>Contact Us {{$user->name}} </h2></div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/procedeToPayment') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/contactUs') }}">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="form-group">
