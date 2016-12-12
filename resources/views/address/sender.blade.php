@@ -3,7 +3,7 @@
         <label for="sendername" class="col-md-4 control-label"><i class="fa fa-user"></i> Name</label>
 
         <div class="col-md-6">
-            <input id="sendername" type="text" class="form-control" name="sendername" value="{{ old('sendername') }}" placeholder="Your Name" required autofocus>
+            <input id="sendername" type="text" class="form-control" name="sendername" value="<?php if(isset($data) && array_key_exists('senderName', $data)) { echo $data['senderName']; }?>" placeholder="Your Name" required autofocus>
 
             @if ($errors->has('sendername'))
                 <span class="help-block">

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Captcha;
+use App\Order;
 use App\Receiver;
 use App\Sender;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use League\Flysystem\Exception;
 
 class HomeController extends Controller
@@ -38,8 +40,13 @@ class HomeController extends Controller
         $captcha = new Captcha();
         $data['captcha'] =  $captcha->verifyCaptcha();
 
+        if($data['captcha'] === false)
+        {
+            return view('home')->with('data', $data);
+        }
+
         $postSender = new Sender;
-        $postSender->name = $request['senderName'];
+        $postSender->name = $data['sernderName'] = $request['sendername'];
         $postSender->loggedIn_userId = Auth::id();
         $postSender->addr1 = $request['senderaddr1'];
         $postSender->addr2 = $request['senderaddr2'];
@@ -49,7 +56,7 @@ class HomeController extends Controller
         $postSender->country = $request['sendercontry'];
         $postSender->created_at = new \DateTime;
         $postSender->updated_at = new \DateTime;
-        $postSender->save();
+        $data['sender'] = $postSender->save();
 
         $postReceiver = new Receiver;
         $postReceiver->name = $request['name'];
@@ -66,8 +73,19 @@ class HomeController extends Controller
         $postReceiver->dealCode = $request['dealcode'];
         $postReceiver->created_at = new \DateTime;
         $postReceiver->updated_at = new \DateTime;
-        $postReceiver->save();
+        $data['receiver'] = $postReceiver->save();
 
-        return view('home');
+        $latestSender = Sender::latest();
+        $latestReceiver = Receiver::latest();
+
+        $postOrder = new Order;
+        $postOrder->sender_id = $latestSender->id;
+        $postOrder->receiver_id = $latestReceiver->id;
+        $postOrder->user_id = $latestSender->loggedIn_userId;
+        $postOrder->created_at = new \DateTime;
+        $postOrder->updated_at = new \DateTime;
+        $data['order'] = $postOrder->save();
+
+        return view('home')->with('data', $data);
     }
 }

@@ -32,8 +32,31 @@
                 </p>
             </div>
         </div>
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('/home') }}">
+        @if(isset($data) && array_key_exists('captcha', $data))
+            @if($data['captcha'] === false)
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2  alert alert-danger" style="text-align: center;">
+                            <strong >Error: Please Enter Captcha!</strong>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endif
+        @if(isset($data) && array_key_exists('sender', $data) && array_key_exists('receiver', $data) && array_key_exists('order', $data))
+            @if($data['sender'] === true && $data['receiver'] === false && $data['order'] === false)
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2  alert alert-success" style="text-align: center;">
+                            <strong >order placed!</strong>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endif
+        <form class="form-horizontal" role="form" method="POST" action="/home">
             {{ csrf_field() }}
+            <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="card">
