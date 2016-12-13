@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <form class="form-horizontal" id="billing-form" role="form"  method="post" action="{{ url('/subscription') }}" >
                             {{ csrf_field() }}
-                            <input type="hidden" name="_token" value=" {{ 'csrf_token()' }}">
+                            <input type="hidden" name="_token" value="{{ 'csrf_token()' }}">
                             <div class="form-group{{ $errors->has('cardNumber') ? ' has-error' : '' }}">
                                 <label for="cardNumber" class="col-md-4 control-label">Card Number</label>
 
