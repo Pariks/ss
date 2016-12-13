@@ -35,6 +35,7 @@ class HomeController extends Controller
     public function orders(Request $request)
     {
 
+        return view('subscription.subscription');
         $user = Auth::user();
         $data = array();
         $captcha = new Captcha();

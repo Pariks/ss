@@ -9,6 +9,7 @@ class SubscriptionController extends Controller
 {
     
    public function getIndex(){
+      
        return view('subscription.subscription');
    }
 }

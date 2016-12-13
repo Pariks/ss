@@ -42,7 +42,7 @@ class FlattenException
             $statusCode = $exception->getStatusCode();
             $headers = array_merge($headers, $exception->getHeaders());
         }
-var_dump($statusCode);
+
         if (null === $statusCode) {
             $statusCode = 500;
         }

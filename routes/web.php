@@ -12,6 +12,7 @@
 */
 
 
+ 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
@@ -49,13 +50,20 @@ Route::get('bestbuy', function(){
 Route::get('deal', 'DealController@deals');
 Route::get('aboutUs',  'MoreController@aboutUs');
 Route::get('learnHow', 'MoreController@learnHow');
-/*Route::get('upload',  function (){
-    return view('test.upload');
-});
-Route::post('/upload', 'ProfileController@updateAvatar');*/
+
+
 
 Route::get('subscription', 'SubscriptionController@getIndex');
+
 Route::post('subscription', function(){
-    dd(Input::all());
+
+    $billing = App::make('app\Billing\BillingInterface');
+    $billing->charge([
+        'email' => Input::get('email'),
+        'token' => Input::get('stripe-token')
+    ]);
+
+    return 'charge was successfull';
+
 });
   

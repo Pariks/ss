@@ -169,6 +169,7 @@ return [
         willvincent\Rateable\RateableServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         GeneaLabs\LaravelCaffeine\LaravelCaffeineServiceProvider::class,
+        App\Providers\BillingServiceProvider::class,
 
         /*
          * Package Service Providers...

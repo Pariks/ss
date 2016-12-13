@@ -54,9 +54,9 @@
                 </div>
             @endif
         @endif
-        <form class="form-horizontal" role="form" method="POST" action="/home">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('/home') }}">
             {{ csrf_field() }}
-            <input type="hidden" name="_token" value=" {{ 'csrf_token()' }}">
+
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="card">
