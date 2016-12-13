@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Symfony\Component\DomCrawler\Form;
 use View;
 use Carbon\Carbon;
 use Auth;
@@ -44,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $age = Carbon::createFromDate(1990, 10, 17);
         View::share('age', $age);
+        View::share('form', Form::class);
         View::composer('*', function($view){
             $view->with('user', Auth::user());
         });

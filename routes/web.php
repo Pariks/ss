@@ -52,3 +52,7 @@ Route::get('learnHow', 'MoreController@learnHow');
     return view('test.upload');
 });
 Route::post('/upload', 'ProfileController@updateAvatar');*/
+
+Route::get('subscription', 'SubscriptionController@getIndex');
+
+  
