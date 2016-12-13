@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03d5d200cda5e865fd9ec898544a41fd",
-    "content-hash": "0992528baa2677c5b2728759ae86accd",
+    "hash": "1f700a222645bda3030db523ae040812",
+    "content-hash": "93e2c076b4c12b21a90d644e6faaf291",
     "packages": [
         {
             "name": "cartalyst/sentinel",
@@ -299,6 +299,44 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "genealabs/laravel-caffeine",
+            "version": "0.3.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeneaLabs/laravel-caffeine.git",
+                "reference": "166e2ca08af7cc62a59360f33e03d1cb8478df6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeneaLabs/laravel-caffeine/zipball/166e2ca08af7cc62a59360f33e03d1cb8478df6a",
+                "reference": "166e2ca08af7cc62a59360f33e03d1cb8478df6a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/routing": "~5.1",
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeneaLabs\\LaravelCaffeine\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Bronner",
+                    "email": "hello@genealabs.com"
+                }
+            ],
+            "description": "Keeping Your Laravel Forms Awake",
+            "time": "2016-09-25 01:24:03"
         },
         {
             "name": "guzzlehttp/guzzle",

@@ -9,6 +9,6 @@ class SubscriptionController extends Controller
 {
     
    public function getIndex(){
-       return view('subscription.index');
+       return view('subscription.subscription');
    }
 }

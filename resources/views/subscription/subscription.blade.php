@@ -8,14 +8,14 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Make Payment</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" id="billing-form" role="form" method="POST" action="{{ url('/') }}">
+                        <form class="form-horizontal" id="billing-form" role="form"  method="post" action="{{ url('/subscription') }}" >
                             {{ csrf_field() }}
-
+                            <input type="hidden" name="_token" value=" {{ 'csrf_token()' }}">
                             <div class="form-group{{ $errors->has('cardNumber') ? ' has-error' : '' }}">
                                 <label for="cardNumber" class="col-md-4 control-label">Card Number</label>
 
                                 <div class="col-md-6">
-                                    <input id="cardNumber" type="text" class="form-control" data-stripe="card-number" name="cardNumber" value="{{ old('cardNumber') }}" required autofocus>
+                                    <input id="cardNumber" type="text" class="form-control" data-stripe="number" name="cardNumber" value="{{ old('cardNumber') }}" required autofocus>
 
                                     @if ($errors->has('cardNumber'))
                                         <span class="help-block">
@@ -29,7 +29,7 @@
                                 <label for="cvc" class="col-md-4 control-label">CVC</label>
 
                                 <div class="col-md-2">
-                                    <input id="cvc" type="text" class="form-control" data-name="cvc" required >
+                                    <input id="cvc" type="text" class="form-control" data-stripe="cvc" required >
 
                                     @if ($errors->has('cvc'))
                                         <span class="help-block">
@@ -43,7 +43,7 @@
 
                                 <div class="col-md-3">
                                     {{  Form::selectMonth('month', null, ['data-stripe' => 'exp-month']) }}
-                                    {{ Form::selectYear('year', date('Y'), date('Y')+10), null, ['data-stripe' => 'exp-year'] }}
+                                    {{ Form::selectYear('year', date('Y'), date('Y')+10, null, ['data-stripe' => 'exp-year']) }}
 
                                 </div>
 
@@ -66,20 +66,12 @@
 
                                 </div>
                             </div>
+                            <div class="payment-errors">
+
+                            </div>
                         </form>
                     </div>
-                    <div class="panel-footer">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-4">
-                            <span> Not Member Yet?
-                            <a class="btn btn-link" href="{{ url('/register') }}">
-                                <i class="fa fa-user-circle"></i>
-                               Create Account
-                            </a>
-                            </span>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

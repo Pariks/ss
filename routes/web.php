@@ -54,5 +54,7 @@ Route::get('learnHow', 'MoreController@learnHow');
 Route::post('/upload', 'ProfileController@updateAvatar');*/
 
 Route::get('subscription', 'SubscriptionController@getIndex');
-
+Route::post('subscription', function(){
+    dd(Input::all());
+});
   

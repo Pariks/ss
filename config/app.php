@@ -168,6 +168,7 @@ return [
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
         willvincent\Rateable\RateableServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        GeneaLabs\LaravelCaffeine\LaravelCaffeineServiceProvider::class,
 
         /*
          * Package Service Providers...

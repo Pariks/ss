@@ -4271,5 +4271,45 @@
         ],
         "description": "HTML and Form Builders for the Laravel Framework",
         "homepage": "http://laravelcollective.com"
+    },
+    {
+        "name": "genealabs/laravel-caffeine",
+        "version": "0.3.12",
+        "version_normalized": "0.3.12.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/GeneaLabs/laravel-caffeine.git",
+            "reference": "166e2ca08af7cc62a59360f33e03d1cb8478df6a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/GeneaLabs/laravel-caffeine/zipball/166e2ca08af7cc62a59360f33e03d1cb8478df6a",
+            "reference": "166e2ca08af7cc62a59360f33e03d1cb8478df6a",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/routing": "~5.1",
+            "illuminate/support": "~5.1",
+            "php": ">=5.5.0"
+        },
+        "time": "2016-09-25 01:24:03",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GeneaLabs\\LaravelCaffeine\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mike Bronner",
+                "email": "hello@genealabs.com"
+            }
+        ],
+        "description": "Keeping Your Laravel Forms Awake"
     }
 ]

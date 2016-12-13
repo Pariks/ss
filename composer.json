@@ -12,7 +12,8 @@
         "cartalyst/sentinel": "2.0.*",
         "willvincent/laravel-rateable": "~1.0",
         "stripe/stripe-php": "4.3",
-        "laravelcollective/html": "~5.0"
+        "laravelcollective/html": "~5.0",
+        "genealabs/laravel-caffeine": "^0.3.12"
 
     },
     "require-dev": {
