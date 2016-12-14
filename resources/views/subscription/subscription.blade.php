@@ -1,14 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Make Payment</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" id="billing-form" role="form"  method="post" action="{{ url('/subscription') }}" >
+                        <form class="form-horizontal" id="billing-form" role="form"  method="post" action="{{ url('/billingConfirmation') }}" >
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -75,7 +74,7 @@
 
                                 </div>
                             </div>
-                            <div class="payment-errors">
+                            <div class="payment-errors" style="color: red; font-weight: bold; font-family: 'Lato', sans-serif;">
 
                             </div>
                         </form>

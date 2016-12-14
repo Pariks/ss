@@ -30,14 +30,22 @@ Auth::routes();
 //Routes that requires authentication
 Route::group(['middleware' => 'authenticated'], function(){
     Route::get('home', 'HomeController@index');
-    Route::post('home', 'HomeController@orders');
+    Route::post('makePayment', 'HomeController@orders');
+    Route::get('makePayment','BillingController@getIndex');
     Route::get('profile', 'ProfileController@index');
     Route::get('contactUs',  'MoreController@contactUs');
     Route::post('contactUs',  'MoreController@postContactUs');
     Route::get('feedback', 'MoreController@feedback');
     Route::post('feedback', 'MoreController@postFeedback');
+
+    Route::get('billingConfirmation', 'BillingController@getIndex');
+
+    Route::post('billingConfirmation','BillingController@index');
+    Route::post('profile', 'ProfileController@updateAvatar');
+    
+    
 });
-Route::post('profile', 'ProfileController@updateAvatar');
+
 
 Route::get('howItWorks', 'HowItWorksController@howItWorks');
 
@@ -53,17 +61,5 @@ Route::get('learnHow', 'MoreController@learnHow');
 
 
 
-Route::get('subscription', 'SubscriptionController@getIndex');
 
-Route::post('subscription', function(){
-
-    $billing = App::make('app\Billing\BillingInterface');
-    $billing->charge([
-        'email' => Input::get('email'),
-        'token' => Input::get('stripe-token')
-    ]);
-
-    return 'charge was successfull';
-
-});
   

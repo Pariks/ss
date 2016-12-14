@@ -54,7 +54,7 @@
                 </div>
             @endif
         @endif
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('/home') }}">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('/makePayment') }}">
             {{ csrf_field() }}
 
             <div class="row">

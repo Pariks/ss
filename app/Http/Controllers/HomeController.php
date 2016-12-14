@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function orders(Request $request)
     {
 
-        return view('subscription.subscription');
+
         $user = Auth::user();
         $data = array();
         $captcha = new Captcha();
@@ -83,9 +83,16 @@ class HomeController extends Controller
         $postOrder->sender_id = $latestSender->id;
         $postOrder->receiver_id = $latestReceiver->id;
         $postOrder->user_id = $latestSender->loggedIn_userId;
+        $postOrder->amount = $request['amount'];
         $postOrder->created_at = new \DateTime;
         $postOrder->updated_at = new \DateTime;
         $data['order'] = $postOrder->save();
+        
+        
+        if($data['order'] && $data['receiver'] && $data['sender'] ){
+            return view('subscription.subscription')->with('data', $data);
+        }
+
 
         return view('home')->with('data', $data);
     }
