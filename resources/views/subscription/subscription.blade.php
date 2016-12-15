@@ -23,7 +23,7 @@
                                 <label for="cardNumber" class="col-md-4 control-label">Card Number</label>
 
                                 <div class="col-md-6">
-                                    <input id="cardNumber" type="text" class="form-control" data-stripe="number" name="cardNumber" value="{{ old('cardNumber') }}" required autofocus>
+                                    <input id="cardNumber" type="text" class="form-control" maxlength="16" data-stripe="number" name="cardNumber" value="{{ old('cardNumber') }}" required autofocus>
 
                                     @if ($errors->has('cardNumber'))
                                         <span class="help-block">
@@ -37,7 +37,7 @@
                                 <label for="cvc" class="col-md-4 control-label">CVC</label>
 
                                 <div class="col-md-2">
-                                    <input id="cvc" type="text" class="form-control" data-stripe="cvc" required >
+                                    <input id="cvc" type="text" name="cvc" maxlength="3" class="form-control" data-stripe="cvc" required >
 
                                     @if ($errors->has('cvc'))
                                         <span class="help-block">

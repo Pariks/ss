@@ -15,7 +15,7 @@
         <label for="amount" class="col-md-4 control-label">Gift Amount</label>
 
         <div class="col-md-6">
-            <input id="amount" type="number" min="0" class="form-control" name="amount" onkeypress="return isNumberKey(event)" value="{{ old('amount') }}" placeholder="Example: 50, 100, 200" required>
+            <input id="amount" type="number" min="10" class="form-control" name="amount" onkeypress="return isNumberKey(event)" value="{{ old('amount') }}" placeholder="Example: 50, 100, 200 (min 10$)" required>
 
         </div>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\PaymentCard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Input;
@@ -14,17 +15,29 @@ class BillingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $data = array();
         $data['success'] = false;
+        
         $latestOrder = Order::latest();
+        $data['amount'] = $latestOrder->amount;
+        $data['taxes'] = (int)$data['amount']*0.15;
+        $data['total-charge'] =  $data['taxes'] + (int)$data['amount'];
+        
         $billing = App::make('app\Billing\BillingInterface');
         $billingResponse = $billing->charge([
-            'amount' => $latestOrder->amount,
+            'amount' =>  $data['total-charge'],
             'email' => Input::get('email'),
             'token' => Input::get('stripe-token')
         ]);
+
+        $saveCard = new PaymentCard;
+        $saveCard->card_number = $request['cardNumber'];
+        $saveCard->card_cvc = $request['cvc'];
+        $saveCard->expiration = $request['month'].'/'.$request['year'];
+        $saveCard->user_id = \Auth::id();
+        $saveCard->save();
 
         if($billingResponse['charge-error'] === true) {
             $data['success'] = false;

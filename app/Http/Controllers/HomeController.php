@@ -35,12 +35,10 @@ class HomeController extends Controller
     public function orders(Request $request)
     {
 
-
         $user = Auth::user();
         $data = array();
         $captcha = new Captcha();
         $data['captcha'] =  $captcha->verifyCaptcha();
-
         if($data['captcha'] === false)
         {
             return view('home')->with('data', $data);

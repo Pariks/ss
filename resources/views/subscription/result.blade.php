@@ -23,7 +23,15 @@
                                     <label for="cardNumber" class="col-md-4 control-label">Amount</label>
 
                                     <div class="col-md-6">
-                                        <span class="label label-default" style="font-weight: 500; font-size: 24px;">$200</span>
+                                        <span class="label label-default" style="font-weight: 500; font-size: 24px;">${{$data['amount']}}</span>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber" class="col-md-4 control-label">Taxes</label>
+
+                                    <div class="col-md-6">
+                                        <span class="label label-danger" >${{$data['taxes']}}</span>
 
                                     </div>
                                 </div>
