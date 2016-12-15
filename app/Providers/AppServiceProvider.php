@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-
+ 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Symfony\Component\DomCrawler\Form;
@@ -44,6 +44,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $age = Carbon::createFromDate(1990, 10, 17);
+
+        
         View::share('age', $age);
         View::share('form', Form::class);
         View::composer('*', function($view){

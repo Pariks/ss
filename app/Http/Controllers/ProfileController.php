@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Image;
 
 
@@ -28,13 +29,14 @@ class ProfileController extends Controller
                 break;
             }
         }
-
+        
         return view('pages.profile' )->with('user', Auth::user())->with('data', $data);
     }
     public function updateAvatar(Request $request)
     {
         //Handle user upload of avatar
         If($request->hasFile('avatar')){
+
             $avatar = $request->file('avatar');
             $filename = time().'.'.$avatar->getClientOriginalExtension();
             Image::make($avatar)->resize(500,500)->save(public_path('/images/uploads/avatars/'.$filename));
