@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
+use Illuminate\Support\Facades\DB;
 use Image;
 
 
@@ -17,7 +19,17 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('pages.profile', array('user' => Auth::user()));
+        $data = array();
+        $data['total-amount'] = Order::getTotalAmount(Auth::id());
+        $amounts = Order::getLastAmount(Auth::id());
+        if(isset($amounts)) {
+            foreach ($amounts as $amount) {
+                $data['last-amount'] = $amount->amount;
+                break;
+            }
+        }
+
+        return view('pages.profile' )->with('user', Auth::user())->with('data', $data);
     }
     public function updateAvatar(Request $request)
     {
@@ -30,8 +42,18 @@ class ProfileController extends Controller
             $user->avatar = $filename;
             $user->update();
         }
-        return view('pages.profile', array('user' => Auth::user()));
 
+        $data = array();
+        $data['total-amount'] = Order::getTotalAmount(Auth::id());
+
+        $amounts = Order::getLastAmount(Auth::id());
+        if(isset($amounts)) {
+            foreach ($amounts as $amount) {
+                $data['last-amount'] = $amount->amount;
+                break;
+            }
+        }
+        return view('pages.profile' )->with('user', Auth::user())->with('data', $data);
     }
 
     /**

@@ -75,21 +75,43 @@
                         </div>
 
                         <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label for="email" class="col-md-5 control-label">Last Gift Amount</label>
 
-                                <div class="col-md-6" style="margin-top: 10px;" >
-                                    <span class="alert alert-danger">0 $</span>
+                            @if(isset($data) && array_key_exists('last-amount', $data))
+                                <div class="form-group">
+                                    <label for="email" class="col-md-5 control-label">Last Gift Amount</label>
+
+                                    <div class="col-md-6" style="margin-top: 10px;" >
+                                        <span class="alert alert-success">{{$data['last-amount']}} $</span>
+                                    </div>
                                 </div>
-                            </div>
+                            @else
+                                <div class="form-group">
+                                    <label for="email" class="col-md-5 control-label">Last Gift Amount</label>
 
-                            <div class="form-group" >
-                                <label for="cardNumber" class="col-md-5 control-label" style="margin-top: 5px;">Total Gift Amount</label>
-
-                                <div class="col-md-6" style="margin-top: 20px;">
-                                    <span class="alert alert-danger">0 $</span>
+                                    <div class="col-md-6" style="margin-top: 10px;" >
+                                        <span class="alert alert-danger">0 $</span>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
+
+                            @if(isset($data) && $data['total-amount'] !== 0)
+                                    <div class="form-group" >
+                                        <label for="cardNumber" class="col-md-5 control-label" style="margin-top: 5px;">Total Gift Amount</label>
+
+                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <span class="alert alert-success">{{$data['total-amount']}} $</span>
+                                        </div>
+                                    </div>
+                            @else
+                                    <div class="form-group" >
+                                        <label for="cardNumber" class="col-md-5 control-label" style="margin-top: 5px;">Total Gift Amount</label>
+
+                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <span class="alert alert-danger">0 $</span>
+                                        </div>
+                                    </div>
+                            @endif
+
                         </form>
 
                     </div>
