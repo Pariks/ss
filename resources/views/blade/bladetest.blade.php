@@ -1,7 +1,14 @@
 @extends('layouts.master')
 
-@section('title')
-    Blade
+@section('header-meta')
+    <title>Free sex videos, Sex tube, Free porn movies - Tube8.com</title>
+    <!-- FOLLOWING META TAG TAKEN FROM OLD FRONT -->
+    <meta name="description" content="Tube8.com is a sex tube type of site that offers you a huge selection of free sex videos updated daily, tons of amateur sex movies. In Tube8 you can vote for your favorite porn movies, upload your best videos and share them in our community." />
+    <meta name="keywords" content="sex videos, sex tube, amateur sex movies, free porn videos, porntube, porn tube, free porn" />
+
+    <link rel="canonical" href="http://front.tube8.pandya.master.nayul-tube8.mgcorp.co/">
+    <link rel="next" href="http://front.tube8.pandya.master.nayul-tube8.mgcorp.co/latest/page/2/">
+    <meta name="google-site-verification" content="MkjX8fC3RoAApmJiYGHHur9WVngwWnPX-FSQkKDzdvM">
 @endsection
 
 @section('content')
